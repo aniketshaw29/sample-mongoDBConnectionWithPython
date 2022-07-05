@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div class="container1">
+<center>
+<h4>Developed by Debajyoti😎 & Arijit😁</h4>
+</center>
+</div>
+
+
+<div class="bio">
+<center>
+<h6>This CRUD web-application is directly connected with our MongoDB Atlas cluster(AWS-south Mumbai).<h6>
+<h6>This project is still incomplete.</h6>
+</center>
+</div>
+
+<div class="container2">
+<h1>Enter Your Information Here </h1>
+<form action="/create" method="post">
+    
+
+     <div class="mb-3">
+         <label for="userid" class="form-label">Enter Your Unique user ID</label>
+           <input type="number" class="form-control"  name="userid">
+    
+      
+       </div>
+
+       <div class="mb-3">
+         <label for="name" class="form-label">Name</label>
+           <input type="text" class="form-control"  name="name">
+      
+       </div>
+
+       <div class="mb-3">
+         <label for="phone" class="form-label">Phone Number</label>
+           <input type="text" class="form-control"  name="phone">
+      
+       </div>
+
+       <div class="mb-3">
+         <label for="exampleInputEmail1" class="form-label">Email address</label>
+           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+       <div id="emailHelp" class="form-text">Your email will be visible to everyone else.Dont enter original mail id.</div>
+       </div>
+
+        <div class="mb-3">
+         <label for="address" class="form-label">Address</label>
+           <input type="text" class="form-control"  name="address">
+      
+        </div>
+       </div>
+
+  
+  <div class="containerbtn">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+
+  </form>
+
+
+<br>
+
+
+ <div class="container2">
+   <h1>View Your Information</h1>
+   <form action="/read" method="post">
+
+    <div class="mb-3">
+         <label for="name" class="form-label">Enter Your Unique ID</label>
+           <input type="number" class="form-control"  name="id">
+      
+       </div>
+       </div>
+
+       <div class="containerbtn">
+       <button type="submit" class="btn btn-primary">Submit</button>
+       </div>
+
+  </form>
+
+
+<br>
+<div class="container2">
+  <h1>Update Your Information Here</h1>
+<form action="/update" method="post">
+
+    <div class="mb-3">
+         <label for="id" class="form-label">Enter Your Unique User ID</label>
+           <input type="number" class="form-control"  name="userid">
+
+           <br>
+<div class="container1">
+      
+        <div class="col-sm-3">
+              <h5>Choose one Option</h5>
+             <select class="form-select form-select-lg mb-3 " aria-label=".form-select-lg example" name='fvalue'>
+        
+               <option value="1">Name</option>
+               <option value="2">Phone Number</option>
+               <option value="3">Email ID</option>
+               <option value="4">Address</option>
+        
+             </select>
+           </div>
+           
+    
+          </div>
+     
+
+
+
+
+      </div>
+       <div class="mb-3">
+         <label for="info" class="form-label">Enter Updated Information</label>
+           <input type="text" class="form-control"  name="info">
+      
+       </div>
+       </div>
+       <div class="containerbtn">
+       <button type="submit" class="btn btn-primary">Submit</button>
+       </div>
+  </form>
+  <br>
+
+  <div class="container2">
+  <h1>Enter Unique User ID to Delete</h1>
+<form action="/delete" method="post">
+
+    <div class="mb-3">
+         <label for="name" class="form-label">Enter the Unique UserID</label>
+           <input type="text" class="form-control"  name="uid">
+      
+       </div>
+       </div>
+       <div class="containerbtnend">
+       <button type="submit" class="btn btn-primary">Submit</button>
+       </div>
+
+  </form>
+
+<center>
+  <marquee><h6>Thanks for using our webapplication.For any suggestions please mail me "debajyoti0007@gmail.com"</h6></marquee>
+  </center>
+
+{% endblock body %}
